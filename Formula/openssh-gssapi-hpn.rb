@@ -5,6 +5,7 @@ class OpensshGssapiHpn < Formula
   mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.6p1.tar.gz"
   version "7.6p1"
   sha256 "a323caeeddfe145baaa0db16e98d784b1fbc7dd436a6bf1f479dfd5cd1d21723"
+  revision 1
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
@@ -20,7 +21,7 @@ class OpensshGssapiHpn < Formula
 
   if build.with? "gssapi-support"
     patch do
-      url "https://sources.debian.org/data/main/o/openssh/1:7.6p1-5/debian/patches/gssapi.patch"
+      url "https://sources.debian.org/data/main/o/openssh/1:7.6p1-2/debian/patches/gssapi.patch"
       sha256 "3a76ae38ec12873659b0113d097e2a2922d7fd46a1000125da6a5163c4b49051"
     end
   end
@@ -28,7 +29,7 @@ class OpensshGssapiHpn < Formula
   if build.with? "hpn"
     patch do
       url 'https://downloads.sourceforge.net/project/hpnssh/HPN-SSH%2014v14%207.6p1/openssh-7_6_P1-hpn-KitchenSink-14.14.diff'
-      sha256 "96b66d0ce26a8e6f9e925c4c991ccab4e9050f95a420e7f7e59f39c89fa17939"
+      sha256 "59109a97ecf60898c1810edcb3ca6f4dadab5659dfe5c38b0e8b32d6e64f61d8"
     end 
   end
 
