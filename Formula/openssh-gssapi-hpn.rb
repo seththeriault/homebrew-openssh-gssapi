@@ -5,7 +5,7 @@ class OpensshGssapiHpn < Formula
   mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.6p1.tar.gz"
   version "7.6p1"
   sha256 "a323caeeddfe145baaa0db16e98d784b1fbc7dd436a6bf1f479dfd5cd1d21723"
-  revision 1
+  revision 2
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
@@ -29,7 +29,7 @@ class OpensshGssapiHpn < Formula
   if build.with? "hpn"
     patch do
       url 'https://downloads.sourceforge.net/project/hpnssh/HPN-SSH%2014v14%207.6p1/openssh-7_6_P1-hpn-KitchenSink-14.14.diff'
-      sha256 "59109a97ecf60898c1810edcb3ca6f4dadab5659dfe5c38b0e8b32d6e64f61d8"
+      sha256 "b5b658049459996eee6ac65f4c5145dfcf529f9825320366ff78937edb2e1186"
     end 
   end
 
